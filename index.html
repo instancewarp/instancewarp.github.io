@@ -248,7 +248,7 @@
             <p>
               Domain adaptation methods often treat background and object regions uniformly. 
               However, backgrounds occupy more pixels and exhibit large cross-domain variations, making them challenging to learn.  
-              Consequently, focusing on salient object-containing regions 
+              Therefore, focusing on salient object-containing regions 
               while reducing attention to background context can lead to more robust and adaptable recognition models. 
             </p>
             <img src="./static/images/intuition.jpg"
@@ -256,14 +256,14 @@
                  alt="InstanceWarp for Domain Adaptation."/>
             <br>
             <br>
-            <p>
+            <!-- <p>
               We propose in-place warping of images based on the locations of object instances. 
               Warped images retain the same size as the original images, but object regions are oversampled using saliency guidance. 
               This approach compels networks to focus on object regions and reduce attention on background context when learning features.
             </p>
             <img src="./static/images/teaser-0.jpg"
                  class="publication-image"
-                 alt="InstanceWarp for Domain Adaptation."/>
+                 alt="InstanceWarp for Domain Adaptation."/> -->
           </div>
         </div>
       </div>
@@ -290,6 +290,9 @@
     </div>
 </section>
 
+
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -297,10 +300,11 @@
         <h2 class="title is-3">Saliency-Guided Warping for Domain Adaptation</h2>
         <div class="content has-text-justified">
           <p>
-            We warp source images based on saliency guidance and then unwarp the backbone features using the same guidance before making predictions. 
+            Our warping focus on oversampling object regions and undersampling background regions. We warp source images based on saliency guidance and then unwarp the backbone features using the same guidance before making predictions. 
             This method can be seamlessly integrated into existing domain adaptation algorithms and is agnostic to the task, 
             domain adaptation algorithm, saliency guidance, and underlying model architecture. 
-            Empirically, we observed that warping source domain images is more effective than warping both source and target domain images.
+            Empirically, we observed that warping source domain images is more effective than warping both source and target domain images. 
+            We do not warp or unwarp at test time.
           </p>
           <img src="./static/images/workflow.jpg"
                class="publication-image"
@@ -309,6 +313,8 @@
       </div>
     </div>
 </section>
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
