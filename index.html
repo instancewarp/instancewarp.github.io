@@ -60,6 +60,9 @@
           <a class="navbar-item" href="https://microsoft.github.io/Chanakya/">
             Chanakya
           </a>
+          <a class="navbar-item" href="https://shenzheng2000.github.io/tpsence.github.io/">
+            TPSeNCE
+          </a>
           <a class="navbar-item" href="https://www.cs.cmu.edu/~roadwork/">
             ROADWork Dataset
           </a>
@@ -240,22 +243,32 @@
 </section>
 
 <section class="section">
-    <div class="container is-max-desktop">
+  <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Why Warping for Domain Adaptation?</h2>
-          <div class="content has-text-justified">
-            <p>
-              Domain adaptation methods often treat background and object regions uniformly. 
-              However, backgrounds occupy more pixels and exhibit large cross-domain variations, making them challenging to learn.  
-              Therefore, focusing on salient object-containing regions 
-              while reducing attention to background context can lead to more robust and adaptable recognition models. 
-            </p>
-            <img src="./static/images/intuition.jpg"
-                 class="publication-image"
-                 alt="InstanceWarp for Domain Adaptation."/>
-            <br>
-            <br>
+          <div class="column is-full-width">
+              <h2 class="title is-3">Why Image Warping for Domain Adaptation?</h2>
+              <div class="content has-text-justified">
+                  <p>
+                      Domain adaptation methods often treat background and object regions uniformly. 
+                      However, backgrounds occupy more pixels and exhibit larger cross-domain variations, making them challenging to learn.  
+                  </p>
+                  <img src="./static/images/intuition.jpg"
+                       class="publication-image"
+                       alt="Intuition Image" />
+                  <p>
+                  <br>
+                  Focusing on salient object-containing regions while reducing attention to background context can lead to more robust and adaptable recognition models. 
+                </p>
+                  <img src="./static/images/new-explanation.jpg"
+                       class="publication-image"
+                       alt="InstanceWarp for Domain Adaptation." />
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
             <!-- <p>
               We propose in-place warping of images based on the locations of object instances. 
               Warped images retain the same size as the original images, but object regions are oversampled using saliency guidance. 
@@ -264,10 +277,8 @@
             <img src="./static/images/teaser-0.jpg"
                  class="publication-image"
                  alt="InstanceWarp for Domain Adaptation."/> -->
-          </div>
-        </div>
-      </div>
-</section>
+
+  
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -329,15 +340,15 @@
           <img src="./static/images/backbone-features.jpg"
                class="publication-image"
                alt="Feature Explanation"/>
-          <br>
-          <br>
-          <p>
+          <!-- <br> -->
+          <!-- <br> -->
+          <!-- <p>
             Importantly, our learned features exhibit better object focus with less attention on background context.
              This ensures that the features are more adaptable and robust to variations in background context.
           <p>
           <img src="./static/images/saliency-explanation.jpg"
                class="publication-image"
-               alt="Feature Explanation."/>
+               alt="Feature Explanation."/> -->
         </div>
       </div>
     </div>
@@ -370,9 +381,8 @@
         <h2 class="title is-3">Method is Task, Algorithm and Backbone Agnostic</h2>
         <div class="content has-text-justified">
           <p>
-            Our method is task, adaptation algorithm, and backbone agnostic. 
-            It can be used for semantic segmentation, object detection, 
-            and other tasks with CNN or Transformer backbones.
+            Our method is agnostic to tasks, adaptation algorithms, and backbone architectures. 
+            It seamlessly applied to object detection and semantic segmentation, using either ConvNet or Transformer backbones.
           </p>
           <img src="./static/images/task-agnostic.jpg"
                class="publication-image"
