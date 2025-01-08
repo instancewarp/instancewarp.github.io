@@ -213,33 +213,53 @@
           <p>
             We oversample salient object regions by warping source-domain images in-place during training while performing domain adaptation. 
           </p>
-          <p>
-            <b>Our approach improves adaptation across geographies, lighting and weather conditions, is agnostic to the task, domain adaptation algorithm, saliency guidance, and underlying model architecture.  Our approach adds minimal memory during training and incurs no additional latency at inference time.</b>
-          </p>
-          <p>
-            Highlights include:
-          </p>
-            <div class="columns is-centered has-text-justified">
-              <list >
-                <li>
-                  <span style="color:#4daf4a;font-weight:bold;">+6.1 mAP50</span>  for BDD100K Clear &rarr; DENSE Foggy
-                </li>
-                <li>
-                  <span style="color:#4daf4a;font-weight:bold;">+3.7 mAP50</span> for BDD100K Day &rarr; Night
-                </li>
-                <li>
-                  <span style="color:#4daf4a;font-weight:bold;">+3.0 mAP50</span> for BDD100K Clear &rarr; Rainy
-                </li>
-                <li>
-                  <span style="color:#4daf4a;font-weight:bold;">+6.3 mIoU</span> for Cityscapes &rarr; ACDC
-                </li>
-              </list>
-            </div>
 
+          <!-- <b>Our approach improves adaptation across geographies, lighting and weather conditions, is agnostic to the task, domain adaptation algorithm, saliency guidance, and underlying model architecture.  Our approach adds minimal memory during training and incurs no additional latency at inference time.</b> -->
+          <p>
+            Technical Highlights include:
+          </p>
+
+          <div class="columns is-centered has-text-justified">
+            <ul>
+              <li>
+                <strong>First work</strong> to show that saliency-guided image warping enhances backbone features and improves model adaptability for unsupervised domain adaptation.
+              </li>
+              <li>
+                Our approach is <strong>agnostic</strong> to the adaptation task, target domain, saliency guidance, model architecture, and domain adaptation algorithm.
+              </li>
+              <li>
+                Our approach is <strong>efficient</strong>, with minimal training overhead and no additional inference latency.
+              </li>
+              <li>
+                Our approach <strong>improves</strong> adaptation across geographies, lighting and weather conditions.
+                </li>
+            </ul>
+          </div>
+
+          <p>
+            Result Highlights include:
+          </p>
+          <div class="columns is-centered has-text-justified">
+            <ul>
+              <li>
+                <span style="color:#4daf4a;font-weight:bold;">+6.1 mAP50</span> for BDD100K Clear &rarr; DENSE Foggy
+              </li>
+              <li>
+                <span style="color:#4daf4a;font-weight:bold;">+3.7 mAP50</span> for BDD100K Day &rarr; Night
+              </li>
+              <li>
+                <span style="color:#4daf4a;font-weight:bold;">+3.0 mAP50</span> for BDD100K Clear &rarr; Rainy
+              </li>
+              <li>
+                <span style="color:#4daf4a;font-weight:bold;">+6.3 mIoU</span> for Cityscapes &rarr; ACDC
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
 </section>
 
 
