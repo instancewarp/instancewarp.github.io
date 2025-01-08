@@ -242,6 +242,34 @@
     <!--/ Abstract. -->
 </section>
 
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+              <h2 class="title is-3">Why is Unsupervised Domain Adaptation Difficult?</h2>
+              <div class="content has-text-justified">
+                  <p>
+                      <!-- Domain adaptation methods often treat background and object regions uniformly. -->
+                      Unsupervised Domain Adaptation (UDA) is challenging because models are trained with dominant scene backgrounds that appear dramatically different across domains. Specifically:
+                  </p>
+                  <ul>
+                      <li><strong>Object-Background Pixel Imbalance:</strong> Backgrounds occupy much more pixels than objects.</li>
+                      <li><strong>Differences in Cross-Domain Object-Background Variations:</strong> Backgrounds exhibit significantly larger cross-domain variations than objects.</li>
+                  </ul>
+                  <img src="./static/images/intuition.jpg"
+                       class="publication-image"
+                       alt="Intuition Image" />
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
 <section class="section">
   <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -249,16 +277,10 @@
               <h2 class="title is-3">Why Image Warping for Domain Adaptation?</h2>
               <div class="content has-text-justified">
                   <p>
-                      Domain adaptation methods often treat background and object regions uniformly. 
-                      However, backgrounds occupy more pixels and exhibit larger cross-domain variations, making them challenging to learn.  
+                      Our image warping oversamples object regions and undersamples background areas, 
+                      helping to focus on salient object regions while reducing attention to background context, 
+                      leading to more robust and adaptable recognition models.
                   </p>
-                  <img src="./static/images/intuition.jpg"
-                       class="publication-image"
-                       alt="Intuition Image" />
-                  <p>
-                  <br>
-                  Focusing on salient object-containing regions while reducing attention to background context can lead to more robust and adaptable recognition models. 
-                </p>
                   <img src="./static/images/new-explanation.jpg"
                        class="publication-image"
                        alt="InstanceWarp for Domain Adaptation." />
@@ -284,14 +306,15 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Which image regions to warp?</h2>
+        <h2 class="title is-3">Which Image Regions to Warp?</h2>
         <div class="content has-text-justified">
           <p>
-            A warping guidance, specifically a saliency-based approach to oversample certain regions over others, 
-            is essential for oversampling image regions. 
+            <!-- A warping guidance, specifically a saliency-based approach to oversample certain regions over others, 
+            is essential for oversampling image regions.  -->
             We propose instance-level saliency guidance, which explicitly oversamples all objects during training.
-            We could have used Static Prior Guidance <a href="https://mtli.github.io/fovea/">[Thavamani 2021,</a> <a href="https://tchittesh.github.io/lzu/">Thavamani 2023]</a> or Geometric Prior Guidance <a href="https://geometriczoom.github.io/">[Ghosh 2023]</a>, 
-            However, these methods are not designed for domain adaptation and do not explicitly oversample object instance regions, which has proven to be the most effective approach.
+            While methods like Static Prior Guidance <a href="https://mtli.github.io/fovea/">[Thavamani 2021,</a> <a href="https://tchittesh.github.io/lzu/">Thavamani 2023]</a> 
+            or Geometric Prior Guidance <a href="https://geometriczoom.github.io/">[Ghosh 2023]</a> could be used, 
+            they are not designed for domain adaptation and do not prioritize object instance regions. 
           </p>
           <img src="./static/images/warp-guidance-comparison.jpg"
                class="publication-image"
